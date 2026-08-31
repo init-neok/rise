@@ -1,0 +1,9 @@
+# transformers 5.x fuses each MoE layer's experts into a single batched module,
+# so individual experts can no longer be addressed or frozen one by one. RISE
+# depends on that addressability; the 4.x line is what it is built against.
+torch>=2.1.0
+transformers>=4.42.0,<5
+accelerate>=0.27.0
+datasets>=2.18.0,<5
+numpy>=1.24.0
+tqdm>=4.65.0

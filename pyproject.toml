@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rise-moe"
+version = "1.0.0"
+description = "Routing Isolation-guided Subnetwork Enhancement for low-resource multilingual adaptation of Mixture-of-Experts language models"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.1.0",
+    "transformers>=4.42.0,<5",
+    "accelerate>=0.27.0",
+    "datasets>=2.18.0,<5",
+    "numpy>=1.24.0",
+    "tqdm>=4.65.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/init-neok/rise"
+Paper = "https://arxiv.org/abs/2604.03592"
+
+[tool.setuptools]
+packages = ["rise"]
